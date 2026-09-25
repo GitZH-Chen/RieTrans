@@ -1,4 +1,8 @@
-# FPHA Reproduction Package
+# RieTrans
+
+Official implementation of *Building Transformation Layers for Riemannian Neural Networks*.
+
+## FPHA Reproduction Package
 
 This repo contains the FPHA subset of the SPD experiments. The package covers SPNN with LEM, AIM, PEM, LCM, and BWM, together with the following baselines:
 
