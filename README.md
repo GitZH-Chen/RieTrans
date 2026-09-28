@@ -153,7 +153,7 @@ if __name__ == "__main__":
 
 The SPDNN code framework follows our [RMLR](https://github.com/GitZH-Chen/RMLR) implementation.
 
-The FPHA package covers SPDNN with LEM, AIM, PEM, LCM, and BWM, together with the following baselines:
+The `./SPDNN` covers SPDNN with LEM, AIM, PEM, LCM, and BWM, together with the following baselines:
 
 - SPDNet
 - SPDNetBN
