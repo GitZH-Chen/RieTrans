@@ -1,0 +1,1 @@
+from .LFC import LorentzFullyConnected

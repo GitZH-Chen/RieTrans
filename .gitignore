@@ -1,14 +1,35 @@
-data/FPHA_TPR_no_wrist20_horizontal_lr_vertical_f200_k1_m2/
-data/global_cov/
-/tmp/
-outputs/
-tensorboard_logs/
-torch_resutls/
-time_param/
-final_results_*
-default.log
-update_github.sh
-*.pyc
+# Internal scripts used to reproduce paper results and test release packages.
+# Each child directory mirrors one release experiment/package.
+/X_reproduce_exp/
+
+# Shared local metadata and Python caches.
 __pycache__/
+*.py[cod]
 .DS_Store
-push.sh
+.idea/
+.pytest_cache/
+*.log
+
+# HNN packaged graph benchmarks; ignore only extracted working data.
+/HNN/data/*
+!/HNN/data/graph_datasets.zip
+/HNN/outputs/
+/HNN/tensorboard_logs/
+/HNN/tensor_results/
+/HNN/time_param/
+/HNN/final_results_*
+
+# SPNN extracted data and generated experiment artifacts.
+/SPNN/data/FPHA_TPR_no_wrist20_horizontal_lr_vertical_f200_k1_m2/
+/SPNN/data/global_cov/
+/SPNN/tmp/
+/SPNN/outputs/
+/SPNN/tensorboard_logs/
+/SPNN/tensor_results/
+/SPNN/torch_resutls/
+/SPNN/time_param/
+/SPNN/final_results_*
+
+# Local release-maintenance helpers.
+/SPNN/update_github.sh
+/SPNN/push.sh

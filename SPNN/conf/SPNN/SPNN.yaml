@@ -1,0 +1,51 @@
+defaults:
+  # Compose this root configuration before applying the selected config groups.
+  - _self_
+  # Default network configuration. Launchers may override it with a baseline.
+  - nnet: SPNN
+  # Default dataset representation for the proposed method.
+  - dataset: FPHA_TPR
+  # Use Hydra's Joblib launcher for comma-separated multirun sweeps.
+  - override hydra/launcher: joblib
+
+fit:
+  # Number of training epochs executed for each repetition.
+  epochs: 200
+  # Number of samples loaded in each training or validation batch.
+  batch_size: 30
+  # Number of intra-operation PyTorch CPU threads.
+  threadnum: 2
+  # If true, record training/validation loss and accuracy with TensorBoard.
+  is_writer: False
+  # Log training time, validation accuracy, and loss every `cycle` epochs.
+  cycle: 1
+  # Base random seed for Python, NumPy, and PyTorch.
+  seed: 42
+  # Number of independently initialized repetitions over the fixed FPHA train/validation split; the data loader does not alter the prepared split.
+  folds: 1
+  # Execution device: "cpu" or a CUDA index such as 0. The training launchers override this with DEVICE; full training requires CUDA in this code.
+  device: cpu
+  # If true, construct and print the model/parameter count, then return before loading data or starting optimization.
+  debug: False
+
+hydra:
+  # Do not create a nested .hydra configuration directory.
+  output_subdir: null
+  run:
+    # Working/output directory for a single Hydra run.
+    dir: ./outputs/${dataset.dataset}
+  sweep:
+    # Parent output directory for Hydra multiruns.
+    dir: ./outputs/${dataset.dataset}
+    # Write every run directly into the selected dataset output directory.
+    subdir: '.'
+  launcher:
+    # Use all visible CPUs when a multirun contains multiple candidates.
+    n_jobs: -1
+  job_logging:
+    handlers:
+      file:
+        # Python logging handler used by Hydra for the per-run log file.
+        class: logging.FileHandler
+        # Hydra log filename created inside the active run directory.
+        filename: default.log

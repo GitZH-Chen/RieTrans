@@ -1,0 +1,8 @@
+defaults:
+    - SPNN
+    - _self_
+
+model:
+    model_type: SPDNN
+    architecture: [20,8]
+    channels: [1,1]

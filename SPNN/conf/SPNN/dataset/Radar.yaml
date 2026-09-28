@@ -1,0 +1,6 @@
+# Dataset dispatch key for the raw complex Radar signals.
+dataset: RADAR
+# Radar contains three action classes.
+class_num: 3
+# Set RADAR_DATA to the local directory containing the Radar data.
+path: ${oc.env:RADAR_DATA}
