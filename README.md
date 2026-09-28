@@ -189,7 +189,11 @@ bash scripts/train_fpha_baselines.sh
 cd ..
 ```
 
-The SPDNN launchers use the prepared FPHA train/test split. The included `scripts/train_fpha_baselines.sh` runs the FPHA comparison methods. The SPDNN and Gyro methods default to CUDA device 0; set `DEVICE` to choose another device. SPDNet-family baselines run on CPU. Results are written under `outputs/${DATASET}/`.
+The SPDNN launchers use the prepared FPHA train/test split. The included `scripts/train_fpha_baselines.sh` runs the FPHA comparison methods. The SPDNN and Gyro methods default to CUDA device 0; set `DEVICE` to choose another device. SPDNet-family baselines run on CPU.
+
+### Output
+
+Results are written to `SPNN/outputs/${DATASET}/`. Final accuracies are recorded in `final_results_${DATASET}` inside that directory.
 
 ## HNN-HFC
 
@@ -214,4 +218,8 @@ bash scripts/train_hnn_hfc_k.sh
 bash scripts/train_hnn_hfc_h.sh
 ```
 
-The graph benchmark files originate from [HGCN](https://github.com/HazyResearch/hgcn/tree/master/data). Each script runs its method on all four datasets with training seed 42, five folds, and the weight decay/dropout settings in `HNN/scripts/HYPERPARAMETERS.md`. Set `DEVICE` to select a CUDA device and `OUTPUT_ROOT` to change the output location.
+The graph benchmark files originate from [HGCN](https://github.com/HazyResearch/hgcn/tree/master/data). Each script runs its method on all four datasets with training seed 42, five folds, and the weight decay/dropout settings in `HNN/scripts/HYPERPARAMETERS.md`. Set `DEVICE` to select a CUDA device.
+
+### Output
+
+Results are written to `HNN/outputs/<dataset>/hfc-p/`, `HNN/outputs/<dataset>/hfc-k/`, and `HNN/outputs/<dataset>/hfc-h/` by default. Each run directory contains `final_results_<dataset>` and the saved fold-wise ROC-AUC tensor under `tensor_results/`. Set `OUTPUT_ROOT` to change the output root.
