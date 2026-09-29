@@ -1,4 +1,4 @@
-<!-- [![arXiv](https://img.shields.io/badge/arXiv-TODO-b31b1b.svg)](https://arxiv.org/abs/TODO) -->
+[![arXiv](https://img.shields.io/badge/arXiv-2609.35436-b31b1b.svg)](https://arxiv.org/abs/2609.35436)
 <!-- [![OpenReview Forum](https://img.shields.io/badge/OpenReview-forum-8c1b13.svg)](https://openreview.net/forum?id=arer1bhGjQ) -->
 <!-- [![OpenReview PDF](https://img.shields.io/badge/OpenReview-pdf-8c1b13.svg)](https://openreview.net/pdf?id=arer1bhGjQ) -->
 
