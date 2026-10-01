@@ -19,17 +19,17 @@ __pycache__/
 /HNN/time_param/
 /HNN/final_results_*
 
-# SPNN extracted data and generated experiment artifacts.
-/SPNN/data/FPHA_TPR_no_wrist20_horizontal_lr_vertical_f200_k1_m2/
-/SPNN/data/global_cov/
-/SPNN/tmp/
-/SPNN/outputs/
-/SPNN/tensorboard_logs/
-/SPNN/tensor_results/
-/SPNN/torch_resutls/
-/SPNN/time_param/
-/SPNN/final_results_*
+# SPDNN extracted data and generated experiment artifacts.
+/SPDNN/data/FPHA_TPR_no_wrist20_horizontal_lr_vertical_f200_k1_m2/
+/SPDNN/data/global_cov/
+/SPDNN/tmp/
+/SPDNN/outputs/
+/SPDNN/tensorboard_logs/
+/SPDNN/tensor_results/
+/SPDNN/torch_resutls/
+/SPDNN/time_param/
+/SPDNN/final_results_*
 
 # Local release-maintenance helpers.
-/SPNN/update_github.sh
-/SPNN/push.sh
+/SPDNN/update_github.sh
+/SPDNN/push.sh

@@ -22,7 +22,7 @@ If you find this project helpful, please consider citing:
 The two experiments have separate environments:
 
 ```bash
-conda env create -f SPNN/environment.yaml
+conda env create -f SPDNN/environment.yaml
 conda env create -f HNN/environment.yaml
 ```
 
@@ -44,7 +44,7 @@ import torch
 
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "SPNN"))
+sys.path.insert(0, str(ROOT / "SPDNN"))
 
 from spnn.SPDLinear import SPDLinear  # noqa: E402
 
@@ -165,10 +165,10 @@ The `./SPDNN` covers SPDNN with LEM, AIM, PEM, LCM, and BWM, together with the f
 
 ### Data
 
-The two prepared FPHA archives are included in `SPNN/data/`:
+The two prepared FPHA archives are included in `SPDNN/data/`:
 
 ```text
-SPNN/data/
+SPDNN/data/
 ├── FPHA_TPR_no_wrist20_horizontal_lr_vertical_f200_k1_m2.zip
 └── global_cov.zip
 ```
@@ -176,7 +176,7 @@ SPNN/data/
 Extract them before training:
 
 ```bash
-cd SPNN
+cd SPDNN
 unzip data/FPHA_TPR_no_wrist20_horizontal_lr_vertical_f200_k1_m2.zip -d data
 unzip data/global_cov.zip -d data
 
@@ -193,7 +193,7 @@ The SPDNN launchers use the prepared FPHA train/test split. The included `script
 
 ### Output
 
-Results are written to `SPNN/outputs/${DATASET}/`. Final accuracies are recorded in `final_results_${DATASET}` inside that directory.
+Results are written to `SPDNN/outputs/${DATASET}/`. Final accuracies are recorded in `final_results_${DATASET}` inside that directory.
 
 ## HNN-HFC
 
